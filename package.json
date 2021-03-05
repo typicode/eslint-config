@@ -1,0 +1,30 @@
+{
+  "name": "@typicode/eslint-config",
+  "version": "0.1.0",
+  "description": "eslint-config",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typicode/eslint-config.git"
+  },
+  "author": "Typicode <typicode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typicode/eslint-config/issues"
+  },
+  "homepage": "https://github.com/typicode/eslint-config#readme",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
+  }
+}
