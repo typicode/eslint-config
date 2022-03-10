@@ -19,13 +19,15 @@
     "url": "https://github.com/typicode/eslint-config/issues"
   },
   "homepage": "https://github.com/typicode/eslint-config#readme",
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
-    "eslint": "^7.21.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.5.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.10.0"
   }
 }
