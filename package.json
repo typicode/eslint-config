@@ -1,6 +1,6 @@
 {
   "name": "@typicode/eslint-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "eslint-config",
   "main": "index.js",
   "files": [
