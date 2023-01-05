@@ -28,6 +28,6 @@
     "prettier": "^2.7.1"
   },
   "peerDependencies": {
-    "eslint": "^8.10.0"
+    "eslint": "^8.31.0"
   }
 }
