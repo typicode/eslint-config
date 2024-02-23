@@ -1,25 +1,31 @@
-module.exports = {
-  root: true,
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
+import eslint from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import tseslint from 'typescript-eslint'
+
+export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: true,
+      },
+    },
   },
-  plugins: ['simple-import-sort', '@typescript-eslint', 'prettier'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:prettier/recommended',
-  ],
-  rules: {
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
-    'prettier/prettier': [
-      'error',
-      { semi: false, singleQuote: true, trailingComma: 'all' },
-    ],
+  {
+    plugins: {
+      'simple-import-sort': simpleImportSort,
+    },
+    rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+    },
   },
-  env: {
-    node: true,
+  {
+    files: ['*.js'],
+    ...tseslint.configs.disableTypeChecked,
   },
-}
+  eslintConfigPrettier
+)
